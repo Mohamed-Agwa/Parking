@@ -18,8 +18,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       body: Container(
         child: Column(
           children: <Widget>[
+            SizedBox(
+              height: 55,
+            ),
             Image(
               image: AssetImage("images/welcome.jpg"),
+            ),
+            SizedBox(
+              height: 125,
             ),
             TextButton(
                 child: Text(
@@ -31,7 +37,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return ChoiceScreen();
                   }));
-                }),
+                },
+                style: kButton1ButtonStyle),
           ],
         ),
       ),
