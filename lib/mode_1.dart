@@ -31,24 +31,46 @@ class _FirstModeScreenState extends State<FirstModeScreen> {
               child: Container(
                 height: 80,
                 color: Colors.redAccent,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: cwidth,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        '${data[index].name}'
-                        "              "
-                        '${data[index].emptycount}'
-                        "/"
-                        '${data[index].totalcount}',
-                        textAlign: TextAlign.center,
+                        '${data[index].name}',
                         style: TextStyle(
                             decoration: TextDecoration.none,
                             color: Colors.white,
                             fontSize: 30),
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        '${data[index].emptycount}'
+                        "/"
+                        '${data[index].totalcount}',
+                        style: TextStyle(
+                            decoration: TextDecoration.none,
+                            color: Colors.white,
+                            fontSize: 30),
+                      ),
+                    )
+                    // Container(
+                    //   width: cwidth,
+                    //   child: Text(
+                    //     '${data[index].name}'
+                    //     "              "
+                    //     '${data[index].emptycount}'
+                    //     "/"
+                    //     '${data[index].totalcount}',
+                    //     textAlign: TextAlign.center,
+                    //     style: TextStyle(
+                    //         decoration: TextDecoration.none,
+                    //         color: Colors.white,
+                    //         fontSize: 30),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
