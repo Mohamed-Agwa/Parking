@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
-import 'choice_screen.dart';
+import 'package:geolocator/geolocator.dart';
 import 'mode_1.dart';
 import 'mode_2.dart';
 
@@ -10,6 +10,12 @@ class ChoiceScreen extends StatefulWidget {
 }
 
 class _ChoiceScreenState extends State<ChoiceScreen> {
+  // void getCurrentLocation() async {
+  //   final position = await Geolocator.getCurrentPosition(
+  //       desiredAccuracy: LocationAccuracy.low);
+  //   print(position);
+  // }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBBackgroundColour,
@@ -28,7 +34,7 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
                 style: kChoice1BText,
               ),
               onPressed: () {
-                print("SUCCES");
+                print("SUCCESS");
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return FirstModeScreen();
                 }));
@@ -44,7 +50,7 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
                 style: kChoice1BText,
               ),
               onPressed: () {
-                print("SUCCES");
+                print("SUCCESS");
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return SecondModeScreen();
                 }));

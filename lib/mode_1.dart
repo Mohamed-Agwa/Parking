@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'response_as_list.dart';
+import 'package:geolocator/geolocator.dart';
 import 'dart:convert';
 import 'choice_screen.dart';
 import 'card_generator.dart';
@@ -12,7 +13,11 @@ class FirstModeScreen extends StatefulWidget {
 
 class _FirstModeScreenState extends State<FirstModeScreen> {
   List<Parking> data = getlist();
-
+  void getCurrentLocation() async {
+    final position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.low);
+    print(position);
+  }
   // ignore: non_constant_identifier_names
 
   Widget build(BuildContext context) {

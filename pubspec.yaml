@@ -22,7 +22,17 @@ environment:
 
 dependencies:
   google_maps_flutter: ^0.5.24+1
+  matrix2d: ^1.0.0
+  geolocator: ^7.0.3
   permission: ^0.1.7
+  location_permissions: ^3.0.0
+  permission_handler: ^8.0.1
+  flutter_polyline_points: ^1.0.0
+  http: ^0.13.1
+  flutter_spinkit: ^4.1.2
+
+
+
   flutter:
     sdk: flutter
 
@@ -36,7 +46,7 @@ dev_dependencies:
     sdk: flutter
 
 
-  http: ^0.12.0+2
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

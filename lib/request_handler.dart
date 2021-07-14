@@ -4,7 +4,7 @@ import 'dart:convert';
 class NetworkHelper {
   NetworkHelper(this.url);
 
-  final String url;
+  final dynamic url;
 
   Future getData() async {
     http.Response response = await http.get(url);
