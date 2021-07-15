@@ -3,6 +3,7 @@ import 'constants.dart';
 import 'package:geolocator/geolocator.dart';
 import 'mode_1.dart';
 import 'mode_2.dart';
+import 'response_as_list.dart';
 
 class ChoiceScreen extends StatefulWidget {
   @override
@@ -15,6 +16,10 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
   //       desiredAccuracy: LocationAccuracy.low);
   //   print(position);
   // }
+  initState() {
+    super.initState();
+    medium();
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
