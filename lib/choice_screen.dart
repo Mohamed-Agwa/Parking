@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parking/Resmode2.dart';
 import 'constants.dart';
 import 'package:geolocator/geolocator.dart';
 import 'mode_1.dart';
@@ -18,7 +19,7 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
   // }
   initState() {
     super.initState();
-    medium();
+    medium2();
   }
 
   Widget build(BuildContext context) {

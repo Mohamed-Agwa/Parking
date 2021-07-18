@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'Resmode2.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'response_as_list.dart';
@@ -19,7 +19,7 @@ class _FirstModeScreenState extends State<FirstModeScreen> {
   void getCurrentLocation() async {
     final position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.low);
-    print(position);
+
   }
 
   // initState() {
@@ -37,7 +37,6 @@ class _FirstModeScreenState extends State<FirstModeScreen> {
   Widget build(BuildContext context) {
     data = getlist();
     double cwidth = MediaQuery.of(context).size.width * 0.8;
-    print('start');
     // if (data == null) {
     //   Duration waiting = Duration(seconds: 20);
     //   sleep(waiting);
@@ -45,7 +44,7 @@ class _FirstModeScreenState extends State<FirstModeScreen> {
     // }
     return WillPopScope(
       onWillPop: () async {
-        medium(); // Action to perform on back pressed
+        medium();
         return true;
       },
       child: Scaffold(

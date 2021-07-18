@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:parking/Resmode2.dart';
 import 'constants.dart';
 import 'choice_screen.dart';
+import 'response_as_list.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -8,6 +10,12 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+  initState() {
+    super.initState();
+    Loc1();
+    medium();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

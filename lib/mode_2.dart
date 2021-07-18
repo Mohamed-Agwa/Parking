@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'loading.dart';
 import 'dart:collection';
+import 'Resmode2.dart';
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
@@ -51,7 +52,6 @@ class _SecondModeScreenState extends State<SecondModeScreen> {
   void _getCurrentLocation() async {
     Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.bestForNavigation);
-    print(position);
 
     setState(() {
       locationMessage = "${position.latitude}, ${position.longitude}";
@@ -85,7 +85,7 @@ class _SecondModeScreenState extends State<SecondModeScreen> {
     //   Duration waiting = Duration(seconds: 5);
     //   sleep(waiting);
     // }
-    List<LatLng> latlongs = [];
+    List<LatLng> latlongs = Getclosest();
     latlongs.add(LatLng(31.209917900340493, 29.922046363760366));
     latlongs.add(LatLng(31.209875873502863, 29.922083607312754));
     latlongs.add(LatLng(31.20980590823376, 29.92212867612264));
@@ -106,7 +106,6 @@ class _SecondModeScreenState extends State<SecondModeScreen> {
           latlongs[j].latitude,
           latlongs[j].longitude);
     }
-    print(helper);
     List<double> distances = [];
     for (z; z < size; z++) {
       distances.add(helper[z][0]);
@@ -118,7 +117,6 @@ class _SecondModeScreenState extends State<SecondModeScreen> {
         destination = LatLng(helper[y][2], helper[y][1]);
       }
     }
-    print(destination);
   }
 
   // void setPolylines() async {

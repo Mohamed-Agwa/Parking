@@ -21,6 +21,7 @@ class Parking {
 }
 
 String arrayText = "";
+
 Future<String> getres() async {
   NetworkHelper networkHelper = NetworkHelper(
       Uri.parse('https://desolate-castle-57587.herokuapp.com/mode1'));
@@ -31,25 +32,25 @@ Future<String> getres() async {
 Future<void> medium() async {
   String arrrayText = await getres();
   arrayText = arrrayText;
-  print(arrayText);
 }
 
 List getlist() {
   if (arrayText == "") {
     getlist();
+    Duration waiting = Duration(seconds: 3);
+    sleep(waiting);
   } else {
     var parkingObjsJson = json.decode(arrayText)['parking'] as List;
     List<Parking> parkingObjs = parkingObjsJson
         .map((parkingJson) => Parking.fromJson(parkingJson))
         .toList();
     // for (var i = 0; i < parkingObjs.length; i++) {
-    //   parkingObjs[i].emptycount = 100 - parkingObjs[i].emptycount;
+    //   parkingObjs[i].emptycount = parkingObjs[i].totalcount - parkingObjs[i].emptycount;
     // }
     return parkingObjs;
   }
   // if (data == null) {
-  //   Duration waiting = Duration(seconds: 20);
-  //   sleep(waiting);
+  //
   //   print('waiting');
   // }
   // String arrayText =
