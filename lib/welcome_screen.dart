@@ -22,6 +22,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       backgroundColor: kBBackgroundColour,
       appBar: AppBar(
         backgroundColor: kTBackgroundColour,
+        centerTitle: true,
+        iconTheme: IconThemeData(
+          color: const Color(0xffffffff), //change your color here
+        ),
+        title: Text(
+          'PARKING',
+          style: kChoice1TText,
+        ),
       ),
       body: Container(
         child: Column(

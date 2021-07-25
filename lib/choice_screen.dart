@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:parking/Resmode2.dart';
+import "package:flutter/services.dart";
 import 'constants.dart';
 import 'package:geolocator/geolocator.dart';
 import 'mode_1.dart';
@@ -23,10 +24,22 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
   }
 
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return Scaffold(
       backgroundColor: kBBackgroundColour,
       appBar: AppBar(
         backgroundColor: kTBackgroundColour,
+        centerTitle: true,
+        iconTheme: IconThemeData(
+          color: const Color(0xffffffff), //change your color here
+        ),
+        title: Text(
+          'PARKING',
+          style: kChoice1TText,
+        ),
       ),
       body: Center(
         child: Column(
@@ -52,7 +65,7 @@ class _ChoiceScreenState extends State<ChoiceScreen> {
             ),
             TextButton(
               child: Text(
-                'Find nearest available spot',
+                'Find Nearest Available Spot',
                 style: kChoice1BText,
               ),
               onPressed: () {

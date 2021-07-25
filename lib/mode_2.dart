@@ -233,7 +233,13 @@ class _SecondModeScreenState extends State<SecondModeScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Map'),
+        iconTheme: IconThemeData(
+          color: const Color(0xffffffff), //change your color here
+        ),
+        title: Text(
+          'Map',
+          style: kChoice1TText,
+        ),
         backgroundColor: kTBackgroundColour,
       ),
       body: Stack(
