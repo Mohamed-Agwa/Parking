@@ -20,6 +20,10 @@ samples, guidance on mobile development, and a full API reference.
 
 ![Parking logo](https://raw.github.com/Mohamed-Agwa/Parking/master/images/2.jpg)
 
+Viewing available parking spots
+
 ![Parking logo](https://raw.github.com/Mohamed-Agwa/Parking/master/images/3.jpg)
+
+Finding nearest available spot
 
 ![Parking logo](https://raw.github.com/Mohamed-Agwa/Parking/master/images/4.jpg)
